@@ -30,14 +30,15 @@ for x in range (0,2,1) :
     touchscreen = input('Touch Screen : ')
     price = input("price : ")
     m = mobile_Object.Mobile(bat, clock,dualsim,fc, four_G, inter_memo, m_dep, m_weight, n_cores, pc_cam, px_height, px_width, ram, sch, scw, talk_time, three_G, touchscreen, price);
-
+    
     ms.append(m);
+    print('\n\n')
 
 for x in ms :
     mp.append(z.LR.predict(x.returnval()));
     # mp.append(z.LR.predict([[x.batt, x.clock, x.dualsim, x.fc, x.four_G, x.inter_memo, x.m_dep,x.m_weight, x.n_cores, x.pc_cam,
     #              x.px_height, x.px_width, x.ram, x.sch, x.scw, x.talk_time, x.three_G, x.touchscreen]]))
-    pass
+    
 
 if (mp[0] < mp[1] ) :
     if (ms[0].price < ms[1].price) :
