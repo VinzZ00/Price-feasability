@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics as m
 from sklearn.ensemble import RandomForestClassifier as rfc
 from sklearn.linear_model import LinearRegression as lr
+import numpy as np
 
 # %%
 
@@ -14,15 +15,9 @@ class predictclass :
         y = dataset['price_range']
         x = dataset.drop(['price_range','blue','wifi'], axis = 1)
 
+
         # %%
         xtrain,xtest,ytrain,ytest =  train_test_split(x,y, train_size= 0.5);
-
-        # %%
-        self.RFC = rfc()
-
-        # %%
-        self.RFC.fit(xtrain, ytrain)
-        ytrain
 
         # %%
         self.LR = lr()
