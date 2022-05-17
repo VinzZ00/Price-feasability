@@ -16,11 +16,8 @@ class predictclass :
         x = dataset.drop(['price_range','blue','wifi'], axis = 1)
 
 
-        # %%
+# %%
         xtrain,xtest,ytrain,ytest =  train_test_split(x,y, train_size= 0.5);
 
-        # %%
-        self.LR = lr()
-
-        # %%
-        self.LR.fit(xtrain, ytrain)
+        self.rfc = rfc(criterion='entropy')
+        self.rfc.fit(xtrain, ytrain)

@@ -29,13 +29,13 @@ while (choice) :
     
     for x in range (0,2,1) :
         print('mobile ', x+1)
-        bat = int(input('battery power : '))
-        clock = int(input('clock speed : '))
+        bat = (input('battery power : '))
+        clock = float(input('clock speed : '))
         dualsim = int(input('dual sim [0 = no || 1 = yes] : '))
         fc = int(input('Front Camera mega pixels : '))
         four_G = int(input('have 4G [0 = No || 1 = Yes] : '))
         inter_memo = int(input('internal Memory : '))
-        m_dep = int(input('Mobile Depth in cm : '))
+        m_dep = float(input('Mobile Depth in cm : '))
         m_weight = int(input('weight of mobile phone : '))
         n_cores = int(input('many cores : '))
         pc_cam = int(input('Primary cam MegaPixel : '))
@@ -54,8 +54,7 @@ while (choice) :
         print('\n\n')
 
     for x in ms :
-        mp.append(z.LR.predict(x.returnval()));
-        
+        mp.append(z.rfc.predict(m.returnval()));
 
     if (mp[0] < mp[1] ) :
         if (ms[0].price < ms[1].price) :
@@ -67,6 +66,11 @@ while (choice) :
             print('phone 1 is VERY WORTH IT')
         else:
             print('phone 1 is not worth it')
+    else :
+        if(ms[0].price > ms[1].price):
+            print('phone 1 is not worth it')
+        else :
+            print("phone 1 is VERY WORTH IT")
 else :
     print("Thank you for passing by, see you later :) ")
 
